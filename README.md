@@ -12,4 +12,4 @@ It works best when your link is to a page that orders by most recent as it only 
 - It will produce produce two csv files:
   - "new_places" + the current date and time. This will contain all the new appartments that were found on that scrape. Nothing in the original "output" file will be reproduced here.
   - "new_output". This file is just used to compare against the original "output" file to ensure that nothing is repeated in the "new_places" file.
-- All new items will be appended to the original "output file.
+- All new items will be appended to the original "output file".
