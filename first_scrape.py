@@ -6,7 +6,7 @@ import csv
 import itertools
 
 search = str(input('Paste the url of your idealista search here: '))
-pages = int(input('How many pages do you want to scrape? '))
+pages = int(input('How many pages do you want to scrape after the first? '))
 
 url_txt = open('the_url.txt', 'w')
 url_txt.write(search)
@@ -54,11 +54,11 @@ for i in range(31):
 driver.execute_script("window.scrollTo(0, 8000)")
 time.sleep(1)
 
-count = 2
+count = 3
 for _ in range(pages):
-    count+=1
     try:
         page_2 = driver.find_element_by_xpath(f'//*[@id="main-content"]/section/div/ul/li[{count}]/a')
+        count+=1
         change_page = page_2.get_attribute('href')
         driver.quit()
         driver = webdriver.Chrome(r'C:\Users\LENOVO\Desktop\chromedriver.exe')
